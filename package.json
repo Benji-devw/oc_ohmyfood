@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "sass": "^1.61.0"
+  },
+  "name": "ohmyfood",
+  "description": "Ohmyfood",
+  "version": "1.0.0",
+  "main": "index.html",
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
