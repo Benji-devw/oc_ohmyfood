@@ -1,0 +1,166 @@
+@import './variables.scss';
+
+
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__logo {
+    position: inherit;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    background: $colour-white;
+    img {
+      padding: 1.8rem 0;
+      width: 16rem;
+    }
+  }
+
+  .nav__menu {
+    // position: relative;
+    // z-index: 3;
+    display: block;
+    height: 220px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.menu {
+  position: relative;
+  background-color: $colour-grey;
+  border-radius: 40px 40px 0 0;
+  h1 i {
+    position: absolute;
+    right: 5rem;
+  }
+  &__content__cards__title {
+    position: relative;
+    margin: 0 0 2rem 0;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: left;
+    text-transform: uppercase;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -.7rem;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background-color: $colour-tertiaire;
+    }
+  }
+  &__btn {
+    color: $colour-white;
+    border: none;
+    cursor: pointer;
+    padding: 1.5rem 2rem;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    background: $main-gradient
+  }
+
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    &__title {
+      font-family: "Shrikhand", sans-serif !important;
+      font-weight: 400;
+      margin: 1rem 0 0 0;
+      text-align: left;
+    }
+    &__cards__title {
+      margin: 3rem 0 1rem 0;
+    }
+    &__item {
+      position: relative;
+      display: flex;
+      justify-content: left;
+      flex-direction: column;
+      padding: 1.8rem 1.8rem;
+      margin: 1.5rem 0;
+      background-color: $colour-white;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
+      i {
+        position: absolute;
+        left: 6rem;
+        width: 40px;
+        margin-top: .1rem;
+      }
+      h3 {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      p {
+        font-size: 15px; 
+        font-weight: 300;
+        margin-top: .2rem;
+      }
+      span {
+        position: absolute;
+        right: 2rem;
+        bottom: 2.3rem;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+  .reserve {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &__btn {
+      color: $colour-white;
+      border: none;
+      cursor: pointer;
+      padding: 1.3rem 4rem;
+      border-radius: 25px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+      background: $main-gradient
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  margin: 5rem 0 0 0;
+  padding: 2rem;
+  background-color: $colour-black;
+  color: $colour-white !important;
+  font-weight: 300;
+  font-size: 16px;
+  .footer__title {
+    margin: 2rem 0;
+  }
+  i {
+    margin-right: 2rem;
+  }
+}
