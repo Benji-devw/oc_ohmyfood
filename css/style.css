@@ -17,15 +17,19 @@
 }
 .header__logo img {
   padding: 1.8rem 0;
-  width: 16rem;
+  max-width: 12rem;
 }
 
 footer {
-  padding: 5rem 2rem 1rem 2rem;
+  padding: 2rem 2rem 1rem 2rem;
   background-color: #101010;
   color: #fff !important;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
+  min-height: 150px;
+  display: flex;
+  align-items: end;
+  justify-content: end;
 }
 footer .footer__title {
   padding: 1rem 0 2rem 0;
@@ -39,22 +43,25 @@ footer i {
 /****** Media queries ***********/
 /* Medium devices (1024px) */
 @media (min-width: 1024px) {
-  .footer__content {
+  footer {
+    padding: 3rem 2rem 1rem 2rem;
+  }
+  footer .footer__content {
     display: flex;
     flex-direction: row-reverse;
   }
-  .footer__content .footer__title {
+  footer .footer__content .footer__title {
     padding: 1rem 5rem 1rem 5rem;
   }
-  .footer__content ul {
+  footer .footer__content ul {
     display: flex;
     align-items: end;
   }
-  .footer__content ul li {
-    margin: 1rem 1rem;
+  footer .footer__content ul li {
+    margin: 1rem 0.5rem;
   }
-  .footer__content ul li:nth-child(3) {
-    margin-left: 4rem;
+  footer .footer__content ul li:nth-child(3) {
+    margin-left: 3rem;
   }
 }
 .nav__home {
@@ -93,7 +100,7 @@ footer i {
   color: #fff;
   border: none;
   cursor: pointer;
-  padding: 1.3rem 4rem;
+  padding: 1rem 2rem;
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -112,8 +119,8 @@ footer i {
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 1.5rem 2rem;
-  margin: 3rem 0;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
   background-color: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
@@ -129,7 +136,7 @@ footer i {
   color: #fff;
   position: absolute;
   left: -0.7rem;
-  top: 1.7rem;
+  top: 1.1rem;
   padding: 0.1rem;
   background-color: #9356DC;
 }
@@ -223,7 +230,7 @@ footer i {
   .resto .resto__content .resto__content__list .resto__article a {
     overflow: hidden;
     flex: 1;
-    width: 490px !important;
+    width: 470px !important;
   }
 }
 .nav__menu {
@@ -254,7 +261,7 @@ footer i {
   position: absolute;
   right: 5rem;
 }
-.menu__content__cards__title {
+.menu .menu__cards__title {
   position: relative;
   margin: 0 0 2rem 0;
   padding: 1rem 0;
@@ -264,7 +271,7 @@ footer i {
   text-align: left;
   text-transform: uppercase;
 }
-.menu__content__cards__title:after {
+.menu .menu__cards__title:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -273,30 +280,21 @@ footer i {
   height: 3px;
   background-color: #99E2D0;
 }
-.menu__btn {
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  padding: 1.5rem 2rem;
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-}
-.menu__content {
+.menu .menu__content {
   display: flex;
   flex-direction: column;
   padding: 2rem;
 }
-.menu__content__title {
+.menu .menu__content .menu__title {
   font-family: "Shrikhand", sans-serif !important;
   font-weight: 400;
   margin: 1rem 0 0 0;
   text-align: left;
 }
-.menu__content__cards__title {
-  margin: 3rem 0 1rem 0;
+.menu .menu__content .menu__cards__title {
+  margin: 2rem 0 1rem 0;
 }
-.menu__content__item {
+.menu .menu__content .menu__item {
   position: relative;
   display: flex;
   justify-content: left;
@@ -307,22 +305,7 @@ footer i {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
 }
-.menu__content__item i {
-  position: absolute;
-  left: 6rem;
-  width: 40px;
-  margin-top: 0.1rem;
-}
-.menu__content__item h3 {
-  font-size: 18px;
-  font-weight: 700;
-}
-.menu__content__item p {
-  font-size: 15px;
-  font-weight: 300;
-  margin-top: 0.2rem;
-}
-.menu__content__item span {
+.menu .menu__content .menu__item span {
   position: absolute;
   right: 2rem;
   bottom: 2.3rem;
@@ -335,11 +318,11 @@ footer i {
   justify-content: center;
   margin: 3rem 0;
 }
-.menu .reserve__btn {
+.menu .reserve .reserve__btn {
   color: #fff;
   border: none;
   cursor: pointer;
-  padding: 1.3rem 4rem;
+  padding: 0.8rem 2rem;
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -349,7 +332,7 @@ footer i {
 /* Medium devices (1024px) */
 @media (min-width: 1024px) {
   .nav__menu img {
-    height: 410px;
+    height: 450px;
   }
   .menu__content {
     max-width: 900px;

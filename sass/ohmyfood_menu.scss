@@ -39,7 +39,7 @@
     position: absolute;
     right: 5rem;
   }
-  &__content__cards__title {
+  .menu__cards__title {
     position: relative;
     margin: 0 0 2rem 0;
     padding: 1rem 0;
@@ -58,32 +58,23 @@
       background-color: $colour-tertiaire;
     }
   }
-  &__btn {
-    color: $colour-white;
-    border: none;
-    cursor: pointer;
-    padding: 1.5rem 2rem;
-    border-radius: 25px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    background: $main-gradient
-  }
 
 
-  &__content {
+  .menu__content {
     display: flex;
     flex-direction: column;
     padding: 2rem;
 
-    &__title {
+    .menu__title {
       font-family: "Shrikhand", sans-serif !important;
       font-weight: 400;
       margin: 1rem 0 0 0;
       text-align: left;
     }
-    &__cards__title {
-      margin: 3rem 0 1rem 0;
+    .menu__cards__title {
+      margin: 2rem 0 1rem 0;
     }
-    &__item {
+    .menu__item {
       position: relative;
       display: flex;
       justify-content: left;
@@ -93,21 +84,13 @@
       background-color: $colour-white;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
       border-radius: 20px;
-      i {
-        position: absolute;
-        left: 6rem;
-        width: 40px;
-        margin-top: .1rem;
-      }
-      h3 {
-        font-size: 18px;
-        font-weight: 700;
-      }
-      p {
-        font-size: 15px; 
-        font-weight: 300;
-        margin-top: .2rem;
-      }
+      
+      // i {
+      //   position: absolute;
+      //   left: 6rem;
+      //   width: 40px;
+      //   margin-top: .1rem;
+      // }
       span {
         position: absolute;
         right: 2rem;
@@ -124,14 +107,14 @@
     display: flex;
     justify-content: center;
     margin: 3rem 0;
-    &__btn {
-      color: $colour-white;
-      border: none;
-      cursor: pointer;
-      padding: 1.3rem 4rem;
-      border-radius: 25px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-      background: $main-gradient
+    .reserve__btn {
+    color: $colour-white;
+    border: none;
+    cursor: pointer;
+    padding: .8rem 2rem;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    background: $main-gradient;
     }
   }
 }
@@ -148,7 +131,7 @@
 @media (min-width: 1024px) {
   .nav__menu {
     img {
-      height: 410px;
+      height: 450px;
     }
   }
   .menu__content {
