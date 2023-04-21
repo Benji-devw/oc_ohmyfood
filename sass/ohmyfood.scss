@@ -1,63 +1,44 @@
-@import "./variables.scss";
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  &__logo {
-    position: inherit;
-    z-index: 2;
-    width: 100%;
+
+.nav__home {
+  width: 100%;
+  height: 50px;
+  background-color: $colour-grey;
+  // font-weight: 500;
+  // font-size: 16px;
+  // line-height: 19px;
+  .search__bar {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    background: $colour-white;
-    img {
-      padding: 1.8rem 0;
-      width: 16rem;
+    // padding: 1.6rem 0;
+    background-color: #eaeaea;
+    .search__bar__icon {
+      margin-right: 1rem;
+      color: $colour-black-med;
     }
   }
-
-  & .nav {
-    width: 100%;
-    height: 50px;
-    background-color: $colour-grey;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    &__search__bar {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      // padding: 1.6rem 0;
-      background-color: #eaeaea;
-      &__icon {
-        margin-right: 1rem;
-        color: $colour-black-med;
-      }
-    }
-    & input {
-      background-color: #eaeaea;
-      color: $colour-black-med;
-      border: none;
-      max-width: 130px;
-      height: 60px;
-      outline: none;
-    }
+  & input {
+    background-color: #eaeaea;
+    color: $colour-black-med;
+    border: none;
+    max-width: 150px;
+    height: 60px;
+    outline: none;
   }
 }
 
+
 .hero {
-  &__headline {
+  .hero__headline {
     text-align: center;
     padding: 4rem 1rem;
     & p {
       padding: 2rem 0 2rem 0;
     }
   }
-  &__btn {
+  .hero__btn {
     color: $colour-white;
     border: none;
     cursor: pointer;
@@ -71,46 +52,41 @@
     padding: 2rem;
     text-align: center;
     background-color: $colour-white;
-    &__content {
-      // .fn__content__items {
-      //   display: flex;
-      //   flex-direction: column;
-      // }
-      &__title {
+    .fn__content {
+      .fn__title {
         width: 100%;
         padding: 1rem 0;
         text-align: left;
       }
-      &__item {
+      .fn__item {
         position: relative;
         display: flex;
-        justify-content: space-around;
-        padding: 2rem 4rem;
+        justify-content: center;
+        padding: 1.5rem 2rem;
         margin: 3rem 0;
         background-color: $colour-grey;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
         i {
-          // position: absolute;
-          // left: 6rem;
-          // width: 40px;
           margin: 0.1rem 1.5rem 0 0;
         }
-        &__step {
+        .fn__item__step {
           font-size: 14px;
           font-weight: 500;
           border-radius: 50px;
           width: 25px;
           color: $colour-white;
           position: absolute;
-          left: -1rem;
+          left: -.7rem;
+          top: 1.7rem;
           padding: 0.1rem;
           background-color: $colour-primary;
         }
         span {
+          margin-top: .3rem;
           font-size: 16px;
-          // margin-left: 2rem;
           font-weight: 700;
+          text-align: center;
         }
       }
     }
@@ -118,20 +94,21 @@
 }
 
 .resto {
-  padding: 2rem;
-  &__content {
-    &__title {
+  padding: 2rem 1rem 5rem 1rem;
+
+  .resto__content {
+    .resto__content__title {
       margin: 2rem 0 3rem 0;
     }
-    &__list {
+    .resto__content__list {
       display: flex;
       flex-direction: column;
       gap: 30px;
-      &__card {
+      .resto__article {
         border-radius: 15px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
       }
-      &__card a {
+      .resto__article a {
         color: #000000;
         position: relative;
         display: flex;
@@ -147,62 +124,40 @@
           object-fit: cover;
           border-radius: 15px 15px 0 0;
         }
-        p {
-          font-weight: 300;
+        .card {
+          padding: 1rem 1rem;
+          display: flex;
+          &__text {
+            flex: 1;
+          }
+          & i {
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+          }
         }
-        i {
-          position: absolute;
-          right: 2rem;
-          bottom: 4rem;
-          // color: $main-gradient
-        }
-      }
-      &__card__content {
-        padding: 1rem 1.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        box-sizing: border-box;
       }
     }
   }
 }
 
-.card__title {
-  font-size: 16px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.card__subtitle {
-  margin: 0;
-  font-weight: 400;
-  font-size: 14px;
-}
 
-footer {
-  margin: 5rem 0 0 0;
-  padding: 2rem;
-  background-color: $colour-black;
-  color: $colour-white !important;
-  font-weight: 300;
-  font-size: 16px;
-  .footer__title {
-    margin: 2rem 0;
-  }
-  i {
-    margin-right: 2rem;
-  }
-}
+
+
+
+
+
+
 
 /****** Media queries ***********/
 /* Medium devices (1024px) */
-@media (min-width: 1084px) {
+@media (min-width: 1024px) {
   .hero {
     h1 {
       font-size: 40px;
     }
     .fn {
-      &__content {
+      .fn__content {
         display: flex;
         flex-direction: column;
         max-width: 1100px;
@@ -210,7 +165,7 @@ footer {
         &__title {
           max-width: 1100px;
         }
-        .fn__content__items {
+        .fn__items {
           display: flex;
           flex-direction: row !important;
           flex-wrap: wrap;
@@ -220,21 +175,20 @@ footer {
     }
   }
   .resto {
-    &__content {
+    .resto__content {
       display: flex;
       flex-direction: column;
       max-width: 1100px;
       margin: auto;
-      &__title {
+      .resto__content__title {
         max-width: 1100px;
       }
-      &__list {
+      .resto__content__list {
         display: flex;
-
         flex-direction: row !important;
         flex-wrap: wrap;
         justify-content: space-between;
-        &__card a {
+        .resto__article a {
           overflow: hidden;
           flex: 1;
           width: 490px !important;

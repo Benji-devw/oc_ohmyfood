@@ -1,34 +1,15 @@
-@import './variables.scss';
 
-
-.header__menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  &__logo {
-    position: inherit;
-    z-index: 2;
+.nav__menu {
+  display: block;
+  height: 320px;
+  // overflow: hidden;
+  img {
+    position: absolute;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    background: $colour-white;
-    img {
-      padding: 1.8rem 0;
-      width: 16rem;
-    }
-  }
-
-  .nav__menu {
-    // position: relative;
-    // z-index: 3;
-    display: block;
-    height: 220px;
-    img {
-      width: 100%;
-      object-fit: cover;
-    }
+    object-fit: cover;
+    height: 470px;
+    left: 0px;
+    top: 0px;
   }
 }
 
@@ -39,10 +20,21 @@
 
 
 
+
 .menu {
-  position: relative;
-  background-color: $colour-grey;
-  border-radius: 40px 40px 0 0;
+  width: 100%;
+  background-color: #fff;
+  // padding: 2rem 0 5rem 0;
+
+  .menu__content {
+    width: 100%;
+    position: relative;
+    // top: -3rem;
+    background-color: $colour-grey;
+    border-radius: 40px 40px 0 0;
+    margin: 0 auto;
+
+  }
   h1 i {
     position: absolute;
     right: 5rem;
@@ -50,6 +42,7 @@
   &__content__cards__title {
     position: relative;
     margin: 0 0 2rem 0;
+    padding: 1rem 0;
     font-weight: 300;
     font-size: 18px;
     line-height: 19px;
@@ -58,7 +51,7 @@
     &:after {
       content: "";
       position: absolute;
-      bottom: -.7rem;
+      bottom: 0;
       left: 0;
       width: 40px;
       height: 3px;
@@ -124,10 +117,13 @@
       }
     }
   }
+
+  
   .reserve {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin: 3rem 0;
     &__btn {
       color: $colour-white;
       border: none;
@@ -147,20 +143,23 @@
 
 
 
-
-
-
-footer {
-  margin: 5rem 0 0 0;
-  padding: 2rem;
-  background-color: $colour-black;
-  color: $colour-white !important;
-  font-weight: 300;
-  font-size: 16px;
-  .footer__title {
-    margin: 2rem 0;
+/****** Media queries ***********/
+/* Medium devices (1024px) */
+@media (min-width: 1024px) {
+  .nav__menu {
+    img {
+      height: 410px;
+    }
   }
-  i {
-    margin-right: 2rem;
+  .menu__content {
+    max-width: 900px;
+    padding: 3rem 10rem;
+    h1 {
+      text-align: center;
+      i {
+      position: relative;
+      left: 2rem;
+      }
+    } 
   }
 }

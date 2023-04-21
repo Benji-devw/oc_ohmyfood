@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&family=Shrikhand&display=swap');
+
 @import './variables.scss';
+@import './header.scss';
+@import './footer.scss';
+@import './ohmyfood.scss';
+@import './ohmyfood_menu.scss';
+
 
 *,
 *::after,
@@ -10,10 +16,6 @@
   box-sizing: inherit;
 }
 
-html {
-  // 10px div by def of 16px
-  font-size: 62.5%;
-}
 
 body {
   box-sizing: border-box;
@@ -58,7 +60,7 @@ h4 {
 p {
   color: #000;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 18px;
   line-height: 21px;
 }
@@ -81,7 +83,9 @@ button {
   font-size: 16px;
   line-height: 19px;
 }
-
+i {
+  font-size: 1.5rem;
+}
 
 .fa-dark {
   color: $colour-black-med;
@@ -117,6 +121,6 @@ button {
 /****** Media queries ***********/
 /* Medium devices (1024px) */
 @media (min-width: 1024px) {
-  .wrapper__content {
-  }
+  // .wrapper__content {
+  // }
 }
