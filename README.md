@@ -1,3 +1,3 @@
-### Ohmyfood
+# Ohmyfood
 
-# run sass: npm run sass
+### run sass: npm run sass

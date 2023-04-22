@@ -7,7 +7,7 @@
   justify-content: center;
 }
 .header__logo {
-  position: inherit;
+  position: relative;
   z-index: 2;
   width: 100%;
   display: flex;
@@ -19,6 +19,14 @@
   padding: 1.8rem 0;
   max-width: 12rem;
 }
+.header__logo .prev_btn a {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  text-align: center;
+}
 
 footer {
   padding: 2rem 2rem 1rem 2rem;
@@ -29,7 +37,6 @@ footer {
   min-height: 150px;
   display: flex;
   align-items: end;
-  justify-content: end;
 }
 footer .footer__title {
   padding: 1rem 0 2rem 0;
@@ -44,6 +51,7 @@ footer i {
 /* Medium devices (1024px) */
 @media (min-width: 1024px) {
   footer {
+    justify-content: end;
     padding: 3rem 2rem 1rem 2rem;
   }
   footer .footer__content {
@@ -106,52 +114,45 @@ footer i {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 .hero .fn {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   background-color: #fff;
 }
 .hero .fn .fn__content .fn__title {
   width: 100%;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   text-align: left;
 }
 .hero .fn .fn__content .fn__item {
   position: relative;
   display: flex;
-  justify-content: center;
-  padding: 1rem 2rem;
-  margin: 2rem 0;
+  align-items: center;
+  padding: 1rem 1rem;
+  margin: 1rem;
   background-color: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
 }
-.hero .fn .fn__content .fn__item i {
-  margin: 0.1rem 1.5rem 0 0;
-}
 .hero .fn .fn__content .fn__item .fn__item__step {
+  position: absolute;
+  left: -0.8rem;
   font-size: 14px;
   font-weight: 500;
   border-radius: 50px;
   width: 25px;
   color: #fff;
-  position: absolute;
-  left: -0.7rem;
-  top: 1.1rem;
-  padding: 0.1rem;
   background-color: #9356DC;
 }
-.hero .fn .fn__content .fn__item span {
-  margin-top: 0.3rem;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
+.hero .fn .fn__content .fn__item i {
+  width: 10%;
+  margin: 0.8rem 1rem;
 }
 
 .resto {
   padding: 2rem 1rem 5rem 1rem;
 }
 .resto .resto__content .resto__content__title {
-  margin: 2rem 0 3rem 0;
+  padding: 1.5rem 0;
 }
 .resto .resto__content .resto__content__list {
   display: flex;
@@ -199,7 +200,6 @@ footer i {
   }
   .hero .fn .fn__content {
     display: flex;
-    flex-direction: column;
     max-width: 1100px;
     margin: auto;
   }
@@ -210,7 +210,14 @@ footer i {
     display: flex;
     flex-direction: row !important;
     flex-wrap: wrap;
-    gap: 0px 3rem;
+    gap: 30px;
+  }
+  .hero .fn .fn__content .fn__items .fn__item {
+    margin: 0 0 2rem 0;
+  }
+  .hero .fn .fn__content .fn__items i {
+    width: 20%;
+    padding: 0 2rem;
   }
   .resto .resto__content {
     display: flex;
@@ -251,19 +258,29 @@ footer i {
   background-color: #fff;
 }
 .menu .menu__content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
   width: 100%;
   position: relative;
   background-color: #F7F7F7;
   border-radius: 40px 40px 0 0;
   margin: 0 auto;
 }
-.menu h1 i {
-  position: absolute;
-  right: 5rem;
+.menu .menu__content .menu__title {
+  display: flex;
+  font-family: "Shrikhand", sans-serif !important;
 }
-.menu .menu__cards__title {
+.menu .menu__content .menu__title:nth-child(1) {
+  margin: 0 2rem 0 0;
+  padding: 1rem 0;
+}
+.menu .menu__content .menu__title:nth-child(2) {
+  padding: 1rem 0;
+}
+.menu .menu__content .menu__cards__title {
   position: relative;
-  margin: 0 0 2rem 0;
+  margin: 0 0 1rem 0;
   padding: 1rem 0;
   font-weight: 300;
   font-size: 18px;
@@ -271,7 +288,7 @@ footer i {
   text-align: left;
   text-transform: uppercase;
 }
-.menu .menu__cards__title:after {
+.menu .menu__content .menu__cards__title:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -280,49 +297,33 @@ footer i {
   height: 3px;
   background-color: #99E2D0;
 }
-.menu .menu__content {
+.menu .menu__content .menu__card__item {
   display: flex;
-  flex-direction: column;
-  padding: 2rem;
-}
-.menu .menu__content .menu__title {
-  font-family: "Shrikhand", sans-serif !important;
-  font-weight: 400;
-  margin: 1rem 0 0 0;
-  text-align: left;
-}
-.menu .menu__content .menu__cards__title {
-  margin: 2rem 0 1rem 0;
-}
-.menu .menu__content .menu__item {
-  position: relative;
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-  padding: 1.8rem 1.8rem;
-  margin: 1.5rem 0;
+  padding: 0.2rem 1rem;
+  margin: 1rem 0;
   background-color: #fff;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
+  align-items: center;
 }
-.menu .menu__content .menu__item span {
-  position: absolute;
-  right: 2rem;
-  bottom: 2.3rem;
-  font-size: 18px;
-  font-weight: 700;
+.menu .menu__content .menu__card__item .menu__card__text {
+  flex: 1;
 }
-.menu .reserve {
+.menu .menu__content .menu__card__item .menu__card__price {
+  flex: 0;
+  margin-top: 1.5rem;
+}
+.menu .command {
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 3rem 0;
 }
-.menu .reserve .reserve__btn {
+.menu .command .command__btn {
   color: #fff;
   border: none;
   cursor: pointer;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 3rem;
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -334,9 +335,12 @@ footer i {
   .nav__menu img {
     height: 450px;
   }
+  .menu__title {
+    justify-content: center;
+  }
   .menu__content {
     max-width: 900px;
-    padding: 3rem 10rem;
+    padding: 2rem 10rem !important;
   }
   .menu__content h1 {
     text-align: center;
@@ -385,8 +389,7 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 20px;
 }
 
 h4 {
@@ -430,6 +433,12 @@ button {
   line-height: 19px;
 }
 
+span {
+  font-weight: 700;
+  font-size: 18px;
+  color: #353535;
+}
+
 i {
   font-size: 1.5rem;
 }
@@ -449,6 +458,18 @@ i {
 
 .fa-active {
   color: #9356DC;
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem 1rem;
+  font-size: 16px;
+  font-weight: 900;
+  color: #008766;
+  border-radius: 3px;
+  background-color: #99E2D0;
 }
 
 .wrapper__content {

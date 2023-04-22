@@ -45,8 +45,7 @@ h2 {
   line-height: 28px;
 }
 h3 {
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 20px;
 }
 h4 {
   color: $colour-white;
@@ -84,6 +83,11 @@ button {
   font-size: 16px;
   line-height: 19px;
 }
+span {
+  font-weight: 700;
+  font-size: 18px;
+  color: $colour-black-med;
+}
 i {
   font-size: 1.5rem;
 }
@@ -102,7 +106,17 @@ i {
   color: $colour-primary;
 }
 
-
+.badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: .3rem 1rem;
+  font-size: 16px;
+  font-weight: 900;
+  color: #008766;
+  border-radius: 3px;
+  background-color: $colour-tertiaire;
+}
 
 
 
