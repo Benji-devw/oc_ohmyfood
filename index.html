@@ -14,7 +14,7 @@
   <body>
     <div class="main__wrapper">
       <div class="wrapper__content">
-        
+
         <header class="header">
           <div class="header__logo">
             <img src="./assets/images/logo/ohmyfood.png" alt="logo"/>
@@ -37,7 +37,12 @@
             <div class="hero__headline">
               <h1>Réservez le menu qui vous convient</h1>
               <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-              <button class="hero__btn">Explorer nos restaurants</button>
+              <div class="wrapper__btn">
+                <a href="#restaurants">
+                  <button class="btn">
+                    Explorer nos restaurants</button>
+                </a>
+              </div>
             </div>
 
             <div class="fn">
@@ -64,7 +69,7 @@
             </div>
           </div>
 
-          <div class="resto">
+          <div id="restaurants" class="resto">
             <div class="resto__content">
               <div class="resto__content__title">
                 <h2>Restaurants</h2>
@@ -77,11 +82,13 @@
                       <div class="card__text">
                         <h3 class="card__title">La palette du goût</h3>
                         <p class="card__subtitle">Ménilmontant</p>
-                    </div>
-                    <i class="fa-solid fa-white fa-test fa-heart fa-lg"></i>
+                      </div>
                     </div>
                     <div class="badge">Nouveau</div>
                   </a>
+                  <div class="like">
+                    <i class="fa-solid fa-white fa-test fa-heart fa-lg"></i>
+                  </div>
                 </article>
                 <article class="resto__article">
                   <a href="#">
@@ -90,11 +97,13 @@
                       <div class="card__text">
                         <h3 class="card__title">La note enchantée</h3>
                         <p class="card__subtitle">Charonne</p>
-                        </div>
-                        <i class="fa-solid fa-heart fa-lg fa-active"></i>
+                      </div>
                     </div>
                     <div class="badge">Nouveau</div>
                   </a>
+                  <div class="like">
+                    <i class="fa-solid fa-heart fa-lg fa-active"></i>
+                  </div>
                 </article>
                 <article class="resto__article">
                   <a href="#">
@@ -103,10 +112,12 @@
                       <div class="card__text">
                         <h3 class="card__title">À la française</h3>
                         <p class="card__subtitle">Cité Rouge</p>
-                        </div>
-                        <i class="fa-solid fa-white fa-test fa-heart fa-lg"></i>
+                      </div>
                     </div>
                   </a>
+                  <div class="like">
+                    <i class="fa-solid fa-white fa-test fa-heart fa-lg"></i>
+                  </div>
                 </article>
                 <article class="resto__article">
                   <a href="#">
@@ -115,30 +126,30 @@
                       <div class="card__text">
                         <h3 class="card__title">Le délice des sens</h3>
                         <p class="card__subtitle">Folie-Méricourt</p>
-                        </div>
-                        <i class="fa-solid fa-white fa-test fa-heart fa-lg"></i>
+                      </div>
                     </div>
                   </a>
+                  <div class="like">
+                    <i class="fa-solid fa-white fa-test fa-heart fa-lg"></i>
+                  </div>
                 </article>
               </section>
             </div>
           </div>
-
-          <section id="activites" class="activites"></section>
         </main>
 
         <footer>
-            <div class="footer__content">
-              <div class="footer__title">
-                <h4>ohmyfood</h4>
-              </div>
-              <ul>
-                <li><a href="#"><i class="fa-solid fa-white fa-utensils"></i>Proposer un restaurant</a></li>
-                <li><a href="#"><i class="fa-solid fa-white fa-handshake"></i>Devenir partenaire</a></li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
+          <div class="footer__content">
+            <div class="footer__title">
+              <h4>ohmyfood</h4>
             </div>
+            <ul>
+              <li><a href="#"><i class="fa-solid fa-white fa-utensils"></i>Proposer un restaurant</a></li>
+              <li><a href="#"><i class="fa-solid fa-white fa-handshake"></i>Devenir partenaire</a></li>
+              <li><a href="#">Mentions légales</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
         </footer>
       </div>
     </div>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&family=Shrikhand&display=swap");
 .header {
   display: flex;
@@ -99,19 +99,10 @@ footer i {
 
 .hero .hero__headline {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
 }
 .hero .hero__headline p {
   padding: 2rem 0 2rem 0;
-}
-.hero .hero__btn {
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  padding: 1rem 2rem;
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 .hero .fn {
   padding: 1rem;
@@ -160,12 +151,14 @@ footer i {
   gap: 30px;
 }
 .resto .resto__content .resto__content__list .resto__article {
+  position: relative;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 .resto .resto__content .resto__content__list .resto__article a {
   color: #000000;
   position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   max-height: 250px;
@@ -174,22 +167,31 @@ footer i {
   border-radius: 15px;
 }
 .resto .resto__content .resto__content__list .resto__article a img {
-  display: block;
-  height: 100%;
+  position: relative;
+  width: 100%;
   object-fit: cover;
-  border-radius: 15px 15px 0 0;
+  left: 0px;
+  bottom: 80px;
 }
 .resto .resto__content .resto__content__list .resto__article a .card {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  background-color: #fff;
   padding: 1rem 1rem;
   display: flex;
+  align-items: center;
 }
 .resto .resto__content .resto__content__list .resto__article a .card__text {
   flex: 1;
 }
-.resto .resto__content .resto__content__list .resto__article a .card i {
-  display: flex;
-  align-items: center;
-  font-size: 1.4rem;
+.resto .resto__content .resto__content__list .like {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 2rem;
+  z-index: 10;
 }
 
 /****** Media queries ***********/
@@ -312,21 +314,6 @@ footer i {
 .menu .menu__content .menu__card__item .menu__card__price {
   flex: 0;
   margin-top: 1.5rem;
-}
-.menu .command {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 3rem 0;
-}
-.menu .command .command__btn {
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  padding: 0.8rem 3rem;
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
 /****** Media queries ***********/
@@ -470,6 +457,40 @@ i {
   color: #008766;
   border-radius: 3px;
   background-color: #99E2D0;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.like i:hover {
+  cursor: pointer;
+  color: #9356DC;
+  -webkit-text-stroke: 0.1px #353535;
+}
+
+.wrapper__btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.wrapper__btn .btn {
+  font-weight: 500 !important;
+  letter-spacing: 1px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(0, #9356DC -11.44%, #FF79DA 123.93%);
+}
+.wrapper__btn .btn:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+  filter: brightness(1.1);
+  transition: 0.3s;
 }
 
 .wrapper__content {

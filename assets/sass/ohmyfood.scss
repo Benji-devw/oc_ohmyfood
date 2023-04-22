@@ -33,19 +33,10 @@
 .hero {
   .hero__headline {
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
     & p {
       padding: 2rem 0 2rem 0;
     }
-  }
-  .hero__btn {
-    color: $colour-white;
-    border: none;
-    cursor: pointer;
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    background: $main-gradient;
   }
 
   .fn {
@@ -98,12 +89,14 @@
       flex-direction: column;
       gap: 30px;
       .resto__article {
+        position: relative;
         border-radius: 15px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
       }
       .resto__article a {
         color: #000000;
         position: relative;
+        z-index: 2;
         display: flex;
         flex-direction: column;
         // justify-content: center;
@@ -112,23 +105,33 @@
         background-color: $colour-white;
         border-radius: 15px;
         img {
-          display: block;
-          height: 100%;
+          position: relative;
+          width: 100%;
           object-fit: cover;
-          border-radius: 15px 15px 0 0;
+          // height: 370px;
+          left: 0px;
+          bottom: 80px;
         }
         .card {
+          position: absolute;
+          z-index: 5;
+          bottom: 0;
+          height: 80px;
+          width: 100%;
+          background-color: #fff;
           padding: 1rem 1rem;
           display: flex;
+          align-items: center;
           &__text {
             flex: 1;
           }
-          & i {
-            display: flex;
-            align-items: center;
-            font-size: 1.4rem;
-          }
         }
+      }
+      .like {
+        position: absolute;
+        bottom: 2.5rem;
+        right: 2rem;
+        z-index: 10;
       }
     }
   }

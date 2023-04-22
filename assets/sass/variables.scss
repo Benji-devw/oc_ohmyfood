@@ -7,11 +7,13 @@ $colour-grey: #F7F7F7;
 $colour-black-med: #353535;
 $colour-black: #101010;
 $colour-white: #fff;
-$main-gradient: linear-gradient(193.33deg, $colour-primary -11.44%, $colour-secondary 123.93%);
+$main-gradient: linear-gradient(0, #9356DC -11.44%, #FF79DA 123.93%);
 
 $heading-shadow-size: 0.55rem;
 $layout-margin: 6rem;
 $grid-gutter: $layout-margin * 0.25;
+
+$fast: 0.3s;
 
 // Functions
 @function lightness-shift($colour) {
