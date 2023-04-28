@@ -31,6 +31,15 @@
     border-radius: 40px 40px 0 0;
     margin: 0 auto;
 
+
+    .entrees, .plats, .desserts {
+      animation: fadeIn 1s ease;
+      animation-fill-mode: both;
+    }
+    .plats { animation-delay: .2s }
+    .desserts { animation-delay: .4s }
+
+
     .menu__title {
       display: flex;
       font-family: "Shrikhand", sans-serif !important;
@@ -45,7 +54,7 @@
     }
     .menu__cards__title {
       position: relative;
-      margin: 0 0 1rem 0;
+      margin: 1rem 0 1rem 0;
       padding: 1rem 0;
       font-weight: 300;
       font-size: 18px;
@@ -65,19 +74,47 @@
 
     .menu__card__item {
       display: flex;
-      padding: .2rem 1rem;
+      padding: 0 0 0 1rem;
       margin: 1rem 0;
       background-color: $colour-white;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
       border-radius: 20px;
       align-items: center;
-
+      min-height: 80px;
+      overflow: hidden;
+      
       .menu__card__text {
         flex: 1;
+        width: 200px;
+        & h3, p {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        & p {
+          font-size: 17px;
+        }
       }
       .menu__card__price {
         flex: 0;
         margin-top: 1.5rem;
+      }
+      .checked {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $colour-tertiaire;
+        height: 80px;
+        margin-left: 1rem;
+        transition: $fast;
+        width: 0px;
+        transform: translateX(100px);
+
+        & i { color: #fff }
+      }
+      &:hover .checked {
+        width: 70px;
+        transform: translateX(0px);
       }
     }
   }

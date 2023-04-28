@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&family=Shrikhand&display=swap');
 
 @import './variables.scss';
+@import './spinner.scss';
 @import './header.scss';
 @import './footer.scss';
 @import './ohmyfood.scss';
@@ -20,19 +21,12 @@
 body {
   box-sizing: border-box;
   background: $colour-grey;
-}
-
-body {
   font-family: "Roboto", sans-serif;
   color: #000;
-  font-size: 2rem;
-  font-weight: 100;
-  line-height: 1.7;
 }
 
-h1, h2, h3 {
-  font-family: "Roboto", sans-serif;
-  color: #000;
+
+:where(h1, h2, h3) {
   font-style: normal;
   font-weight: 700;
 }
@@ -72,6 +66,10 @@ ul {
 }
 
 input {
+  color: $colour-black-med;
+  background-color: #eaeaea;
+  border: none;
+  outline: none;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -84,26 +82,13 @@ button {
   line-height: 19px;
 }
 span {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 18px;
-  color: $colour-black-med;
+  color: #000;
 }
 i {
-  font-size: 1.5rem;
-}
-
-.fa-dark {
   color: $colour-black-med;
-}
-.fa-white {
-  color: $colour-white;
-}
-.fa-test {
-  color: none;
-  -webkit-text-stroke: 1.5px $colour-black-med;
-}
-.fa-active {
-  color: $colour-primary;
+  font-size: 1.5rem;
 }
 
 
@@ -117,6 +102,15 @@ i {
   color: #008766;
   border-radius: 3px;
   background-color: $colour-tertiaire;
+}
+
+
+.fa-dark {color: $colour-black-med;}
+.fa-white {color: $colour-white;}
+.fa-active {color: $colour-primary;}
+.fa-test {
+  color: none;
+  -webkit-text-stroke: 1.5px $colour-black-med;
 }
 
 
@@ -135,26 +129,24 @@ i {
 }
 
 
-
 .wrapper__btn {
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 1rem 0;
   .btn {
-    font-weight: 500 !important;
     letter-spacing: 1px;
     color: $colour-white;
     border: none;
     cursor: pointer;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     border-radius: 25px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     background: $main-gradient;
+    transition: $fast;
     &:hover {
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
       filter: brightness(1.1);
-      transition: $fast;
     }
   }
 }
@@ -167,16 +159,34 @@ i {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  // margin: $layout-margin;
-  // padding: $grid-gutter $grid-gutter 0 $grid-gutter;
 }
+
+
+
+
+
+/****** @keyframes ***********/
+@keyframes fadeOut {
+  0% { opacity: 1;}
+  100% { 
+    opacity: 0; 
+    visibility: hidden;
+    display: none;
+  }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1;}
+}
+
+
 
 
 
 
 /****** Media queries ***********/
 /* Medium devices (1024px) */
-@media (min-width: 1024px) {
-  // .wrapper__content {
-  // }
-}
+// @media (min-width: 1024px) {
+//   .wrapper__content {
+//   }
+// }
