@@ -81,7 +81,7 @@
 }
 
 footer {
-  padding: 2rem 2rem 1rem 2rem;
+  padding: 1rem;
   background-color: #101010;
   color: #fff !important;
   font-weight: 400;
@@ -94,6 +94,9 @@ footer .footer__title {
   padding: 1rem 0 2rem 0;
   display: flex;
   align-items: end;
+}
+footer li {
+  margin: 0.5rem 0;
 }
 footer i {
   margin-right: 1.5rem;
@@ -137,6 +140,9 @@ footer i {
 }
 .nav__home .search__bar .search__bar__icon {
   margin-right: 1rem;
+}
+.nav__home .search__bar span {
+  color: #353535;
 }
 
 .hero .hero__headline {
@@ -194,6 +200,15 @@ footer i {
   position: relative;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.resto .resto__content .resto__content__list .resto__article:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.resto .resto__content .resto__content__list .resto__article:hover img {
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  transform: scale(1.05);
 }
 .resto .resto__content .resto__content__list .resto__article a {
   color: #000000;
@@ -205,13 +220,16 @@ footer i {
   overflow: hidden;
   background-color: #fff;
   border-radius: 15px;
+  height: 350px;
 }
 .resto .resto__content .resto__content__list .resto__article a img {
-  position: relative;
+  position: absolute;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   left: 0px;
   bottom: 80px;
+  transition: 0.3s;
 }
 .resto .resto__content .resto__content__list .resto__article a .card {
   position: absolute;
@@ -229,7 +247,7 @@ footer i {
 }
 .resto .resto__content .resto__content__list .like {
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 1.6rem;
   right: 2rem;
   z-index: 10;
 }
@@ -506,7 +524,26 @@ i {
   font-size: 1.5rem;
 }
 
-.badge {
+.fa-white {
+  color: #fff;
+}
+
+.fa-main {
+  color: #9356DC;
+}
+
+.fa-none {
+  -webkit-text-stroke: 1.5px #353535;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-grad-checked {
+  background-image: linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge__new {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -514,25 +551,8 @@ i {
   font-size: 16px;
   font-weight: 900;
   color: #008766;
-  border-radius: 3px;
+  border-radius: 2px;
   background-color: #99E2D0;
-}
-
-.fa-dark {
-  color: #353535;
-}
-
-.fa-white {
-  color: #fff;
-}
-
-.fa-active {
-  color: #9356DC;
-}
-
-.fa-test {
-  color: none;
-  -webkit-text-stroke: 1.5px #353535;
 }
 
 .like {
@@ -542,7 +562,9 @@ i {
 }
 .like i:hover {
   cursor: pointer;
-  color: #9356DC;
+  background-image: linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.1px #353535;
 }
 

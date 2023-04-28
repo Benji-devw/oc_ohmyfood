@@ -92,7 +92,20 @@ i {
 }
 
 
-.badge {
+.fa-white {color: #fff;}
+.fa-main {color: $colour-primary;}
+.fa-none {
+  -webkit-text-stroke: 1.5px $colour-black-med;
+  -webkit-text-fill-color: transparent;
+}
+.fa-grad-checked {
+  background-image: $main-gradient-icon;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.badge__new {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -100,17 +113,8 @@ i {
   font-size: 16px;
   font-weight: 900;
   color: #008766;
-  border-radius: 3px;
+  border-radius: 2px;
   background-color: $colour-tertiaire;
-}
-
-
-.fa-dark {color: $colour-black-med;}
-.fa-white {color: $colour-white;}
-.fa-active {color: $colour-primary;}
-.fa-test {
-  color: none;
-  -webkit-text-stroke: 1.5px $colour-black-med;
 }
 
 
@@ -118,11 +122,12 @@ i {
   display: flex;
   align-items: center;
   font-size: 1.3rem;
-  i {
+  & i {
     &:hover {
       cursor: pointer;
-      color: $colour-primary;
-      // background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+      background-image: $main-gradient-icon;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
       -webkit-text-stroke: .1px $colour-black-med;
     }
   }
