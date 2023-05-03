@@ -35,6 +35,7 @@ $fast: 0.3s;
 @mixin flex-col () {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 @mixin border($colour: $colour-primary) {

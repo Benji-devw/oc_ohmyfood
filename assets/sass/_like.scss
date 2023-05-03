@@ -1,6 +1,5 @@
 .like {
-  display: flex;
-  align-items: center;
+  @include flex-row();
   font-size: 1.3rem;
   & i {
     &:hover {
