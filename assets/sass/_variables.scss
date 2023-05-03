@@ -1,5 +1,6 @@
+// Variables //
 
-// Variables
+// Colors
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiaire: #99E2D0;
@@ -11,20 +12,9 @@ $main-gradient: linear-gradient(0, #9356DC -11.44%, #FF79DA 123.93%);
 $main-gradient-icon: linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%);
 
 $font-Shrikhand : "Shrikhand", sans-serif !important;
-$heading-shadow-size: 0.55rem;
-$layout-margin: 6rem;
-$grid-gutter: $layout-margin * 0.25;
 
 $fast: 0.3s;
 
-// Functions
-@function lightness-shift($colour) {
-  @if (lightness($colour) < 25%) {
-    @return lighten($colour, 10%);
-  } @else {
-    @return darken($colour, 10%);
-  }
-}
 
 // Mixins
 @mixin flex-row () {
@@ -42,9 +32,4 @@ $fast: 0.3s;
   border: 0.1rem solid $colour;
 }
 
-@mixin heading-shadow(
-  $colour: lightness-shift($colour-primary),
-  $offset: $heading-shadow-size
-) {
-  text-shadow: $offset $offset $colour;
-}
+

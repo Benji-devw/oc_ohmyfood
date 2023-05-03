@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&family=Shrikhand&display=swap');
 
 @import './_variables';
@@ -24,12 +24,12 @@ body {
   box-sizing: border-box;
   background: $colour-grey;
   font-family: "Roboto", sans-serif;
+  font-style: normal;
   color: #000;
 }
 
 
 :where(h1, h2, h3) {
-  font-style: normal;
   font-weight: 700;
 }
 h1 {
@@ -54,7 +54,6 @@ h4 {
 }
 p {
   color: #000;
-  font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 21px;
@@ -72,13 +71,11 @@ input {
   background-color: #eaeaea;
   border: none;
   outline: none;
-  font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   line-height: 19px;
 }
 button {
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
