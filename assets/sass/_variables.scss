@@ -8,8 +8,7 @@ $colour-grey: #F7F7F7;
 $colour-black-med: #353535;
 $colour-black: #101010;
 $colour-white: #fff;
-$main-gradient: linear-gradient(0, #9356DC -11.44%, #FF79DA 123.93%);
-$main-gradient-icon: linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%);
+$main-gradient: linear-gradient(0, $colour-primary -11.44%, $colour-secondary 123.93%);
 
 $font-Shrikhand : "Shrikhand", sans-serif !important;
 
@@ -17,6 +16,16 @@ $fast: 0.3s;
 
 
 // Mixins
+@mixin linear-gradient-icon() {
+  background: -moz-linear-gradient(0, $colour-secondary -11.44%, $colour-primary 123.93%);
+  background: -webkit-linear-gradient(0, $colour-secondary -11.44%, $colour-primary 123.93%);
+  background: linear-gradient(0, $colour-secondary -11.44%, $colour-primary 123.93%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: .1px $colour-black-med;
+}
 @mixin flex-row () {
   display: flex;
   flex-direction: row;

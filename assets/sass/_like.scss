@@ -4,10 +4,7 @@
   & i {
     &:hover {
       cursor: pointer;
-      background-image: $main-gradient-icon;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: .1px $colour-black-med;
+      @include linear-gradient-icon();
     }
   }
 }
