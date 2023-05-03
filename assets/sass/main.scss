@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&family=Shrikhand&display=swap');
 
-@import './variables.scss';
-@import './spinner.scss';
-@import './header.scss';
-@import './footer.scss';
-@import './ohmyfood.scss';
-@import './ohmyfood_menu.scss';
+@import './_variables';
+@import './_header';
+@import './_footer';
+@import './_spinner';
+@import './_badge-novelty';
+@import './_like';
+@import './_button';
+
 
 
 *,
@@ -105,56 +107,6 @@ i {
 }
 
 
-.badge__new {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: .3rem 1rem;
-  font-size: 16px;
-  font-weight: 900;
-  color: #008766;
-  border-radius: 2px;
-  background-color: $colour-tertiaire;
-}
-
-
-.like {
-  display: flex;
-  align-items: center;
-  font-size: 1.3rem;
-  & i {
-    &:hover {
-      cursor: pointer;
-      background-image: $main-gradient-icon;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: .1px $colour-black-med;
-    }
-  }
-}
-
-
-.wrapper__btn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 1rem 0;
-  .btn {
-    letter-spacing: 1px;
-    color: $colour-white;
-    border: none;
-    cursor: pointer;
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    background: $main-gradient;
-    transition: $fast;
-    &:hover {
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
-      filter: brightness(1.1);
-    }
-  }
-}
 
 
 

@@ -1,3 +1,4 @@
+@import './main.scss';
 
 
 .nav__home {
@@ -11,10 +12,6 @@
     background-color: #eaeaea;
     .search__bar__icon {
       margin-right: 1rem;
-    }
-    & span {
-      color: $colour-black-med;
-      // font-weight: 500;
     }
   }
 }

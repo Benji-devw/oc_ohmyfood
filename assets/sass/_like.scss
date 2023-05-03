@@ -1,0 +1,14 @@
+.like {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  & i {
+    &:hover {
+      cursor: pointer;
+      background-image: $main-gradient-icon;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: .1px $colour-black-med;
+    }
+  }
+}
