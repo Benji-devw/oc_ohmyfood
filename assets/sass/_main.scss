@@ -30,14 +30,9 @@ body {
 
 
 :where(h1, h2, h3) {
+  color: $colour-black;
   font-weight: 700;
-}
-h1 {
-  font-size: 24px;
-  line-height: 28px;
-}
-h2 {
-  font-size: 24px;
+  font-size: 28px;
   line-height: 28px;
 }
 h3 {
