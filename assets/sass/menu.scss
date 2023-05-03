@@ -1,4 +1,4 @@
-@import './main.scss';
+@import './_main';
 
 
 .nav__menu {
@@ -21,8 +21,7 @@
   background-color: #fff;
 
   .menu__content {
-    display: flex;
-    flex-direction: column;
+    @include flex-col();
     padding: 1rem 1rem;
     width: 100%;
     position: relative;
@@ -40,8 +39,8 @@
 
 
     .menu__title {
-      display: flex;
-      font-family: "Shrikhand", sans-serif !important;
+      @include flex-row();
+      font-family: $font-Shrikhand;
 
       &:nth-child(1) {
         margin: 0 2rem 0 0;
@@ -72,7 +71,7 @@
     }
 
     .menu__card__item {
-      display: flex;
+      @include flex-row();
       padding: 0 0 0 1rem;
       margin: 1rem 0;
       background-color: $colour-white;
@@ -99,8 +98,7 @@
         margin-top: 1.5rem;
       }
       .checked {
-        display: flex;
-        align-items: center;
+        @include flex-row();
         justify-content: center;
         background-color: $colour-tertiaire;
         height: 80px;

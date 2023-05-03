@@ -1,14 +1,12 @@
-@import './main.scss';
+@import './_main';
 
 
 .nav__home {
   width: 100%;
   .search__bar {
-    min-height: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flex-row();
     justify-content: center;
+    min-height: 50px;
     background-color: #eaeaea;
     .search__bar__icon {
       margin-right: 1rem;
@@ -38,8 +36,7 @@
       }
       .fn__item {
         position: relative;
-        display: flex;
-        align-items: center;
+        @include flex-row();
         padding: 1rem 1rem;
         margin: 1.5rem 1rem;
         background-color: $colour-grey;
@@ -71,8 +68,8 @@
       padding: 1.5rem 0;
     }
     .resto__content__list {
-      display: flex;
-      flex-direction: column;
+      @include flex-col();
+
       gap: 30px;
 
       .resto__article {
@@ -160,8 +157,7 @@
           max-width: 1100px;
         }
         .fn__items {
-          display: flex;
-          flex-direction: row !important;
+          @include flex-row();
           flex-wrap: wrap;
           gap: 30px;
           .fn__item {
@@ -177,16 +173,13 @@
   }
   .resto {
     .resto__content {
-      display: flex;
-      flex-direction: column;
       max-width: 1100px;
       margin: auto;
       .resto__content__title {
         max-width: 1100px;
       }
       .resto__content__list {
-        display: flex;
-        flex-direction: row !important;
+        @include flex-row();
         flex-wrap: wrap;
         justify-content: space-between;
         .resto__article a {

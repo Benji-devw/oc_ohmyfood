@@ -349,6 +349,8 @@ i {
 }
 .menu .menu__content .menu__title {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   font-family: "Shrikhand", sans-serif !important;
 }
 .menu .menu__content .menu__title:nth-child(1) {
@@ -379,6 +381,8 @@ i {
 }
 .menu .menu__content .menu__card__item {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 0 0 0 1rem;
   margin: 1rem 0;
   background-color: #fff;
@@ -406,6 +410,7 @@ i {
 }
 .menu .menu__content .menu__card__item .checked {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: #99E2D0;

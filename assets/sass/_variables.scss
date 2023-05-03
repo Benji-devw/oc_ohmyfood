@@ -10,6 +10,7 @@ $colour-white: #fff;
 $main-gradient: linear-gradient(0, #9356DC -11.44%, #FF79DA 123.93%);
 $main-gradient-icon: linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%);
 
+$font-Shrikhand : "Shrikhand", sans-serif !important;
 $heading-shadow-size: 0.55rem;
 $layout-margin: 6rem;
 $grid-gutter: $layout-margin * 0.25;
@@ -26,6 +27,16 @@ $fast: 0.3s;
 }
 
 // Mixins
+@mixin flex-row () {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@mixin flex-col () {
+  display: flex;
+  flex-direction: column;
+}
+
 @mixin border($colour: $colour-primary) {
   border: 0.1rem solid $colour;
 }
