@@ -128,18 +128,6 @@ footer i {
   }
 }
 
-.badge__new {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.3rem 1rem;
-  font-size: 16px;
-  font-weight: 900;
-  color: #008766;
-  border-radius: 2px;
-  background-color: #99E2D0;
-}
-
 .like {
   display: flex;
   flex-direction: row;
@@ -423,8 +411,8 @@ i {
 }
 
 /****** Media queries ***********/
-/* Medium devices (1024px) */
-@media (min-width: 1024px) {
+/* Medium devices (767px) */
+@media (min-width: 767px) {
   .nav__menu img {
     height: 450px;
   }

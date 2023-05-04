@@ -36,6 +36,11 @@ $fast: 0.3s;
   flex-direction: column;
   justify-content: center;
 }
+@mixin grid-row () {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: 2rem;
+}
 
 @mixin border($colour: $colour-primary) {
   border: 0.1rem solid $colour;

@@ -128,18 +128,6 @@ footer i {
   }
 }
 
-.badge__new {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.3rem 1rem;
-  font-size: 16px;
-  font-weight: 900;
-  color: #008766;
-  border-radius: 2px;
-  background-color: #99E2D0;
-}
-
 .like {
   display: flex;
   flex-direction: row;
@@ -299,6 +287,18 @@ i {
 }
 /****** Media queries ***********/
 /* Medium devices (1024px) */
+.badge__new {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem 1rem;
+  font-size: 16px;
+  font-weight: 900;
+  color: #008766;
+  border-radius: 2px;
+  background-color: #99E2D0;
+}
+
 .nav__home {
   width: 100%;
 }
@@ -369,12 +369,6 @@ i {
 .resto .resto__content .resto__content__title {
   padding: 1.5rem 0;
 }
-.resto .resto__content .resto__content__list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 30px;
-}
 .resto .resto__content .resto__content__list .resto__article {
   position: relative;
   border-radius: 15px;
@@ -432,13 +426,12 @@ i {
 }
 
 /****** Media queries ***********/
-/* Medium devices (1024px) */
-@media (min-width: 1024px) {
+/* Medium devices (767px) */
+@media (min-width: 767px) {
   .hero h1 {
     font-size: 40px;
   }
   .hero .fn .fn__content {
-    display: flex;
     max-width: 1100px;
     margin: auto;
   }
@@ -446,13 +439,10 @@ i {
     max-width: 1100px;
   }
   .hero .fn .fn__content .fn__items {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  .hero .fn .fn__content .fn__items .fn__item {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
     margin: 0 0 2rem 0;
   }
   .hero .fn .fn__content .fn__items i {
@@ -467,16 +457,10 @@ i {
     max-width: 1100px;
   }
   .resto .resto__content .resto__content__list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .resto .resto__content .resto__content__list .resto__article a {
-    overflow: hidden;
-    flex: 1;
-    width: 470px !important;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 2rem;
   }
 }
 
