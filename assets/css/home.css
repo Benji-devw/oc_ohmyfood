@@ -134,7 +134,7 @@ footer i {
   align-items: center;
   font-size: 1.3rem;
 }
-.like i:hover {
+.like i:is(:hover, :active, :focus) {
   cursor: pointer;
   background: -moz-linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%);
   background: -webkit-linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%);
@@ -238,7 +238,7 @@ button {
 
 span {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
 }
 
@@ -339,7 +339,7 @@ i {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 1rem 0.5rem;
   margin: 1.5rem 0.5rem;
   background-color: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -348,7 +348,7 @@ i {
   transition: 0.3s;
 }
 .hero .fn .fn__content .fn__item:hover {
-  background-color: #99E2D0;
+  background-color: rgba(153, 226, 208, 0.4745098039);
 }
 .hero .fn .fn__content .fn__item .fn__item__step {
   padding: 0.3rem 0.6rem;
@@ -360,7 +360,7 @@ i {
 }
 .hero .fn .fn__content .fn__item i {
   width: 10%;
-  margin: 0.8rem 1rem;
+  margin: 0.8rem 0.5rem;
 }
 
 .resto {
@@ -443,11 +443,10 @@ i {
     display: grid;
     grid-auto-rows: auto;
     grid-gap: 2rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin: 0 0 2rem 0;
   }
   .hero .fn .fn__content .fn__items i {
-    width: 20%;
     padding: 0 2rem;
   }
   .resto .resto__content {

@@ -1,10 +1,9 @@
 .like {
   @include flex-row();
   font-size: 1.3rem;
-  & i {
-    &:hover {
+
+  & i:is(:hover, :active, :focus) {
       cursor: pointer;
       @include linear-gradient-icon();
-    }
   }
 }

@@ -10,7 +10,8 @@
   min-height: 80px;
   overflow: hidden;
   cursor: pointer;
-  
+  touch-action: auto;
+
   .menu__card__text {
     flex: 1;
     min-width: 50%;
@@ -29,7 +30,6 @@
     padding: 0 .3rem
   }
   .menu__card__checked {
-    // position: absolute;
     @include flex-row();
     justify-content: center;
     background-color: $colour-tertiaire;
@@ -41,9 +41,10 @@
 
     i { color: $colour-white }
   }
-  
-  &:is(:hover, :active) .menu__card__checked {
-      width: 70px;
-      transform: translateX(0px);
-  }
+}
+
+
+.menu__card__item:is(:hover, :active) .menu__card__checked {
+  width: 70px;
+  transform: translateX(0px);
 }

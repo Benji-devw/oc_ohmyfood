@@ -134,7 +134,7 @@ footer i {
   align-items: center;
   font-size: 1.3rem;
 }
-.like i:hover {
+.like i:is(:hover, :active, :focus) {
   cursor: pointer;
   background: -moz-linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%);
   background: -webkit-linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%);
@@ -238,7 +238,7 @@ button {
 
 span {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
 }
 
@@ -301,6 +301,7 @@ i {
   min-height: 80px;
   overflow: hidden;
   cursor: pointer;
+  touch-action: auto;
 }
 .menu__card__item .menu__card__text {
   flex: 1;
@@ -334,6 +335,7 @@ i {
 .menu__card__item .menu__card__checked i {
   color: #fff;
 }
+
 .menu__card__item:is(:hover, :active) .menu__card__checked {
   width: 70px;
   transform: translateX(0px);
