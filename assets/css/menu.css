@@ -141,16 +141,22 @@ footer i {
   align-items: center;
   font-size: 1.3rem;
 }
-.like i:is(:hover, :active, :focus) {
+.like i {
   cursor: pointer;
-  background: -moz-linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%);
-  background: -webkit-linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%);
-  background: linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%);
+  background: -moz-linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%) right/0 no-repeat;
+  background: -webkit-linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%) right/0 no-repeat;
+  background: linear-gradient(0, #FF79DA -11.44%, #9356DC 123.93%) right/0 no-repeat;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0.1px #353535;
+  -webkit-text-stroke: 1.2px #353535;
+  color: transparent;
+  background-clip: text;
+  transition: 0.3s ease;
+}
+.like i:is(:hover, :active, :focus) {
+  background-size: 100%;
 }
 
 .wrapper__btn {
@@ -167,7 +173,7 @@ footer i {
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   background: linear-gradient(0, #9356DC -11.44%, #FF79DA 123.93%);
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 .wrapper__btn .btn:hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
@@ -335,7 +341,7 @@ i {
   background-color: #99E2D0;
   height: 80px;
   margin-left: 1rem;
-  transition: 0.3s;
+  transition: 0.3s ease;
   width: 0px;
   transform: translateX(100px);
 }
@@ -390,6 +396,7 @@ i {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
   font-family: "Shrikhand", sans-serif !important;
 }
 .menu .menu__content .menu__title:nth-child(1) {

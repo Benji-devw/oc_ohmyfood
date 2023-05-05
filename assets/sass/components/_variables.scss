@@ -2,6 +2,7 @@
 
 // Colors
 $colour-primary: #9356DC;
+$colour-primary-hover: #9256dc4e;
 $colour-secondary: #FF79DA;
 $colour-tertiaire: #99E2D0;
 $colour-grey: #F7F7F7;
@@ -12,20 +13,21 @@ $main-gradient: linear-gradient(0, $colour-primary -11.44%, $colour-secondary 12
 
 $font-Shrikhand : "Shrikhand", sans-serif !important;
 
-$fast: 0.3s;
+$fast: 0.3s ease;
 
 
 // Mixins
 @mixin linear-gradient-icon() {
-  background: -moz-linear-gradient(0, $colour-secondary -11.44%, $colour-primary 123.93%);
-  background: -webkit-linear-gradient(0, $colour-secondary -11.44%, $colour-primary 123.93%);
-  background: linear-gradient(0, $colour-secondary -11.44%, $colour-primary 123.93%);
+  background: -moz-linear-gradient(0, $colour-secondary -11.44%, $colour-primary 123.93%) right / 0 no-repeat;
+  background: -webkit-linear-gradient(0, $colour-secondary -11.44%, $colour-primary 123.93%) right / 0 no-repeat;
+  background: linear-gradient(0, $colour-secondary -11.44%, $colour-primary 123.93%) right / 0 no-repeat;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: .1px $colour-black-med;
+  -webkit-text-stroke: 1.2px $colour-black-med;
 }
+
 @mixin flex-row () {
   display: flex;
   flex-direction: row;
@@ -36,14 +38,11 @@ $fast: 0.3s;
   flex-direction: column;
   justify-content: center;
 }
+
 @mixin grid-row () {
   display: grid;
   grid-auto-rows: auto;
   grid-gap: 2rem;
-}
-
-@mixin border($colour: $colour-primary) {
-  border: 0.1rem solid $colour;
 }
 
 

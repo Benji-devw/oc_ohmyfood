@@ -1,0 +1,16 @@
+.like {
+  @include flex-row();
+  font-size: 1.3rem;
+
+  i {
+    cursor: pointer;
+    @include linear-gradient-icon();
+    color: transparent;
+    background-clip: text;
+    transition: $fast;
+
+    &:is(:hover, :active, :focus) {
+      background-size: 100%;
+    }
+  }
+}

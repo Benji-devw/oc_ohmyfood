@@ -1,5 +1,5 @@
-@import './_main';
-@import './menu-card-item';
+@import './components/_main';
+@import './components/menu-card-item';
 
 .nav__menu {
   display: block;
@@ -37,6 +37,7 @@
 
     .menu__title {
       @include flex-row();
+      position: relative;
       font-family: $font-Shrikhand;
 
       &:nth-child(1) {
