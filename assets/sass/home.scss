@@ -46,9 +46,14 @@
         border-radius: 20px;
         cursor: pointer;
         transition: $fast;
+        
         &:hover {
           background-color: $colour-primary-hover;
+          .fn_icon {
+            color: $colour-primary;
+          }
         }
+
         .fn__item__step {
           padding: .3rem .6rem;
           position: absolute;
