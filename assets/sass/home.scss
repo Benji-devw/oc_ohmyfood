@@ -46,7 +46,7 @@
         border-radius: 20px;
         cursor: pointer;
         transition: $fast;
-        
+        .fn_icon {transition: $fast;}
         &:hover {
           background-color: $colour-primary-hover;
           .fn_icon {
@@ -63,7 +63,7 @@
           background-color: $colour-primary;
         }
         i {
-          width: 10%;
+          width: 15%;
           margin: .8rem .5rem;
         }
       }

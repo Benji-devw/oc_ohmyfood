@@ -356,6 +356,9 @@ i {
   cursor: pointer;
   transition: 0.3s ease;
 }
+.hero .fn .fn__content .fn__item .fn_icon {
+  transition: 0.3s ease;
+}
 .hero .fn .fn__content .fn__item:hover {
   background-color: rgba(146, 86, 220, 0.1843137255);
 }
@@ -371,7 +374,7 @@ i {
   background-color: #9356DC;
 }
 .hero .fn .fn__content .fn__item i {
-  width: 10%;
+  width: 15%;
   margin: 0.8rem 0.5rem;
 }
 
