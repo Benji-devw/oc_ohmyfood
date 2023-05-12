@@ -296,7 +296,7 @@ i {
 }
 /****** Media queries ***********/
 /* Medium devices (1024px) */
-.badge__new {
+.badge__novelty {
   position: absolute;
   top: 1rem;
   right: 1rem;
