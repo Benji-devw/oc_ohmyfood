@@ -56,11 +56,11 @@
     transform: rotate(360deg);
   }
 }
-// @keyframes fadeOut {
-//   0% { opacity: 1;}
-//   100% { 
-//     opacity: 0; 
-//     visibility: hidden;
-//     display: none;
-//   }
-// }
+@keyframes fadeOut {
+  0% { opacity: 1;}
+  100% { 
+    opacity: 0; 
+    visibility: hidden;
+    display: none;
+  }
+}
